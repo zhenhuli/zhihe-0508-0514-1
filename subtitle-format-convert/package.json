@@ -1,0 +1,26 @@
+{
+  "name": "subtitle-format-convert",
+  "version": "1.0.0",
+  "description": "Subtitle format conversion tool with SRT, ASS, LRC support",
+  "main": "index.html",
+  "scripts": {
+    "dev": "gulp dev",
+    "build": "gulp build",
+    "start": "gulp serve"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.7.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-uglify": "^3.0.2",
+    "postcss": "^8.4.31",
+    "postcss-modules": "^6.0.0"
+  },
+  "keywords": ["subtitle", "srt", "ass", "lrc", "converter"],
+  "author": "",
+  "license": "MIT"
+}

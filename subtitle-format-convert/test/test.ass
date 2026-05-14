@@ -1,0 +1,20 @@
+[Script Info]
+Title: 测试字幕
+ScriptType: v4.00+
+WrapStyle: 0
+PlayResX: 640
+PlayResY: 480
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:01.00,0:00:04.00,Default,,0,0,0,,欢迎使用字幕格式转换工具
+Dialogue: 0,0:00:04.50,0:00:08.00,Default,,0,0,0,,这是一个 ASS 格式的测试字幕
+Dialogue: 0,0:00:08.50,0:00:12.00,Default,,0,0,0,,支持 SRT、ASS、LRC 格式互转
+Dialogue: 0,0:00:12.50,0:00:16.00,Default,,0,0,0,,还可以批量调整时间轴偏移
+Dialogue: 0,0:00:16.50,0:00:20.00,Default,,0,0,0,,以及按比例缩放时间轴
+Dialogue: 0,0:00:20.50,0:00:25.00,Default,,0,0,0,,原生 JavaScript 实现\N无需任何外部依赖

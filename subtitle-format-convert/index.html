@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>字幕格式转换工具</title>
+  <link rel="stylesheet" href="dist/css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="title">🎬 字幕格式转换工具</h1>
+      <p class="subtitle">支持 SRT、ASS、LRC 格式互转，批量时间轴偏移，编码转换</p>
+    </header>
+
+    <div class="mainContent">
+      <section class="uploadSection">
+        <h2 class="sectionTitle">📁 上传字幕文件</h2>
+        
+        <div id="dropZone" class="dropZone">
+          <p class="dropZoneText">点击或拖拽字幕文件到此处</p>
+          <p class="dropZoneText" style="font-size: 0.9em; color: #95a5a6;">支持 .srt .ass .lrc 格式</p>
+          <input type="file" id="fileInput" accept=".srt,.ass,.lrc,.ssa" multiple style="display: none;">
+        </div>
+
+        <div id="fileList" class="fileList"></div>
+
+        <div class="formatSelect" style="margin-top: 20px;">
+          <div class="selectGroup">
+            <label class="label">目标格式</label>
+            <select id="targetFormat" class="select">
+              <option value="srt">SRT</option>
+              <option value="ass">ASS</option>
+              <option value="lrc">LRC</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="actionButtons">
+          <button id="convertBtn" class="button buttonPrimary">转换格式</button>
+          <button id="downloadBtn" class="button buttonSuccess">下载字幕</button>
+        </div>
+      </section>
+
+      <section class="previewSection">
+        <h2 class="sectionTitle">👁️ 预览</h2>
+        <textarea id="previewTextarea" class="previewTextarea" readonly></textarea>
+      </section>
+    </div>
+
+    <section class="toolsSection">
+      <h2 class="sectionTitle">🛠️ 高级工具</h2>
+      
+      <div class="toolsGrid">
+        <div class="toolCard">
+          <h3 class="toolTitle">⏱️ 时间轴偏移</h3>
+          <p style="color: #7f8c8d; margin-bottom: 15px; font-size: 0.9em;">
+            调整所有字幕的时间（秒，正数延后，负数提前）
+          </p>
+          <div class="inputGroup">
+            <input type="number" id="offsetInput" class="input" placeholder="例如: 1 或 -0.5" step="0.1">
+            <button id="offsetBtn" class="button buttonPrimary">应用偏移</button>
+          </div>
+        </div>
+
+        <div class="toolCard">
+          <h3 class="toolTitle">📐 时间轴缩放</h3>
+          <p style="color: #7f8c8d; margin-bottom: 15px; font-size: 0.9em;">
+            按比例调整字幕时间（用于匹配不同帧率的视频）
+          </p>
+          <div class="inputGroup">
+            <input type="number" id="scaleInput" class="input" placeholder="例如: 0.5 或 2" step="0.01">
+            <button id="scaleBtn" class="button buttonPrimary">应用缩放</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>字幕格式转换工具 - 原生 JavaScript + Gulp + CSS Modules</p>
+    </footer>
+  </div>
+
+  <script src="dist/js/app.js"></script>
+</body>
+</html>
