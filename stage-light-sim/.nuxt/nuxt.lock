@@ -1,0 +1,9 @@
+{
+  "pid": 31057,
+  "startedAt": 1778814728031,
+  "command": "dev",
+  "cwd": "/Users/lizhenhu/Desktop/zhihe-0508-0514-1/stage-light-sim",
+  "port": 3002,
+  "hostname": "::1",
+  "url": "http://[::1]:3002"
+}
