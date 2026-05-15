@@ -1,0 +1,89 @@
+.burgundy {
+  color: #891a32;
+}
+
+.bg-burgundy {
+  background-color: #891a32;
+}
+
+.hover-bg-dark-red:hover {
+  background-color: #6b1427;
+}
+
+.hover-dark-red:hover {
+  color: #6b1427;
+}
+
+.max-h-60 {
+  max-height: 240px;
+}
+
+.gap2 {
+  gap: 0.5rem;
+}
+
+input[type="range"] {
+  height: 6px;
+  background: #e5e5e5;
+  border-radius: 3px;
+  appearance: none;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: #891a32;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  background: #891a32;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.transition-colors {
+  transition: background-color 0.2s ease;
+}
+
+.disabled-opacity-50:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.dn {
+  display: none;
+}
+
+.bg-green {
+  background-color: #19a974;
+}
+
+.hover-bg-dark-green:hover {
+  background-color: #137752;
+}
+
+.bg-blue {
+  background-color: #357edd;
+}
+
+.hover-bg-dark-blue:hover {
+  background-color: #2659a5;
+}
+
+.bg-orange {
+  background-color: #ff6300;
+}
+
+.hover-bg-dark-orange:hover {
+  background-color: #cc4f00;
+}
