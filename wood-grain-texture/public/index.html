@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>木纹纹理生成器 - 高仿真版</title>
+  <link rel="stylesheet" type="text/css" href="/_dist_/styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>木纹纹理生成器</h1>
+      <p class="subtitle">高仿真木纹 · 实时预览 · 一键下载 PNG 素材</p>
+    </header>
+
+    <main class="main-content">
+      <div class="preview-section">
+        <div class="canvas-wrapper">
+          <canvas id="woodCanvas" width="800" height="600"></canvas>
+        </div>
+        <div class="download-section">
+          <button id="downloadBtn" class="download-btn">下载 PNG 素材</button>
+          <button id="regenerateBtn" class="regen-btn">随机生成</button>
+        </div>
+      </div>
+
+      <aside class="control-panel">
+        <div class="control-group">
+          <h3>预设木材</h3>
+          <div class="preset-grid">
+            <button class="preset-btn active" data-preset="oak">橡木</button>
+            <button class="preset-btn" data-preset="walnut">胡桃木</button>
+            <button class="preset-btn" data-preset="cherry">樱桃木</button>
+            <button class="preset-btn" data-preset="maple">枫木</button>
+            <button class="preset-btn" data-preset="mahogany">桃花心木</button>
+            <button class="preset-btn" data-preset="teak">柚木</button>
+            <button class="preset-btn" data-preset="ebony">乌木</button>
+            <button class="preset-btn" data-preset="ash">白蜡木</button>
+            <button class="preset-btn" data-preset="pine">松木</button>
+            <button class="preset-btn" data-preset="bamboo">竹纹</button>
+            <button class="preset-btn" data-preset="rosewood">红木</button>
+            <button class="preset-btn" data-preset="zebrawood">斑马木</button>
+          </div>
+          <p class="preset-description" id="presetDescription">经典浅橡木，纹理清晰自然</p>
+        </div>
+
+        <div class="control-group">
+          <h3>基础颜色</h3>
+          <div class="control-item">
+            <label>
+              <span>基础色</span>
+              <input type="color" id="baseColor" value="#C8A27B" />
+            </label>
+          </div>
+          <div class="control-item">
+            <label>
+              <span>纹理色</span>
+              <input type="color" id="grainColor" value="#8B6914" />
+            </label>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <h3>纹理参数</h3>
+          <div class="control-item">
+            <label>
+              <span>纹理密度</span>
+              <input type="range" id="density" min="10" max="80" value="28" />
+              <span class="value" id="densityValue">28</span>
+            </label>
+          </div>
+          <div class="control-item">
+            <label>
+              <span>纹理深浅</span>
+              <input type="range" id="depth" min="20" max="80" value="52" />
+              <span class="value" id="depthValue">52</span>
+            </label>
+          </div>
+          <div class="control-item">
+            <label>
+              <span>纹理走向</span>
+              <input type="range" id="angle" min="-45" max="45" value="0" />
+              <span class="value" id="angleValue">0°</span>
+            </label>
+          </div>
+          <div class="control-item">
+            <label>
+              <span>纹理粗细</span>
+              <input type="range" id="thickness" min="2" max="12" value="6" />
+              <span class="value" id="thicknessValue">6</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <h3>高级参数</h3>
+          <div class="control-item">
+            <label>
+              <span>纹理不规则度</span>
+              <input type="range" id="irregularity" min="10" max="90" value="55" />
+              <span class="value" id="irregularityValue">55</span>
+            </label>
+          </div>
+          <div class="control-item">
+            <label>
+              <span>年轮间距</span>
+              <input type="range" id="ringSpacing" min="10" max="60" value="28" />
+              <span class="value" id="ringSpacingValue">28</span>
+            </label>
+          </div>
+          <div class="control-item">
+            <label>
+              <span>细节噪声</span>
+              <input type="range" id="noise" min="10" max="70" value="45" />
+              <span class="value" id="noiseValue">45</span>
+            </label>
+          </div>
+          <div class="control-item">
+            <label>
+              <span>节疤数量</span>
+              <input type="range" id="knots" min="0" max="15" value="5" />
+              <span class="value" id="knotsValue">5</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <h3>画布尺寸</h3>
+          <div class="control-item">
+            <label>
+              <span>宽度</span>
+              <input type="number" id="canvasWidth" min="100" max="4000" value="800" />
+              <span class="unit">px</span>
+            </label>
+          </div>
+          <div class="control-item">
+            <label>
+              <span>高度</span>
+              <input type="number" id="canvasHeight" min="100" max="4000" value="600" />
+              <span class="unit">px</span>
+            </label>
+          </div>
+          <button id="resizeBtn" class="resize-btn">应用尺寸</button>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script type="module" src="/_dist_/index.js"></script>
+</body>
+</html>

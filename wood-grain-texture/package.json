@@ -1,0 +1,17 @@
+{
+  "name": "wood-grain-texture",
+  "version": "1.0.0",
+  "description": "Native JS + Canvas + Snowpack + Less wood grain texture generator",
+  "main": "index.js",
+  "scripts": {
+    "start": "node scripts/start.js",
+    "build": "snowpack build"
+  },
+  "keywords": ["canvas", "texture", "wood", "snowpack"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "snowpack": "^3.8.8",
+    "snowpack-plugin-less": "^1.0.0"
+  }
+}
